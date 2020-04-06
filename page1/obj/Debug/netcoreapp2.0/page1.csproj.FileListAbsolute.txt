@@ -1,0 +1,3 @@
+/Users/olivier/Documents/IIT/research_project_on/simplewebapp/page1/obj/Debug/netcoreapp2.0/page1.csprojAssemblyReference.cache
+/Users/olivier/Documents/IIT/research_project_on/simplewebapp/page1/obj/Debug/netcoreapp2.0/page1.AssemblyInfoInputs.cache
+/Users/olivier/Documents/IIT/research_project_on/simplewebapp/page1/obj/Debug/netcoreapp2.0/page1.AssemblyInfo.cs
