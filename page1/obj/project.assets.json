@@ -93,6 +93,9 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.dll": {}
         }
       },
+      "Microsoft.AspNetCore.App/2.1.0": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -2575,6 +2578,20 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.xml",
         "microsoft.aspnetcore.2.0.0.nupkg.sha512",
         "microsoft.aspnetcore.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.App/2.1.0": {
+      "sha512": "pL/hdtRi6hE83frK+siepThgNlVu+G7JQYmZnjU9e1B1GxDOKLwpPl5jnoRm/E448toK8858yVEXakVg5xvw/Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.app/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netcoreapp2.1/Microsoft.AspNetCore.App.props",
+        "build/netcoreapp2.1/Microsoft.AspNetCore.App.targets",
+        "lib/netcoreapp2.1/_._",
+        "microsoft.aspnetcore.app.2.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.app.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.0.0": {
@@ -7798,6 +7815,7 @@
     ".NETCoreApp,Version=v2.0": [
       "Mango >= 1.0.0",
       "Microsoft.AspNetCore >= 2.0.0",
+      "Microsoft.AspNetCore.App",
       "Microsoft.NETCore.App >= 2.0.0",
       "MongoDB.Driver >= 2.10.2",
       "MongoDB.Driver.Core >= 2.10.2"
@@ -7847,6 +7865,11 @@
             "target": "Package",
             "version": "[2.0.0, )"
           },
+          "Microsoft.AspNetCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "(, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -7878,11 +7901,30 @@
   },
   "logs": [
     {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Microsoft.AspNetCore.App does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Microsoft.AspNetCore.App",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
       "message": "Package 'Mango 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Mango",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.AspNetCore.App 2.1.0 is not compatible with netcoreapp2.0 (.NETCoreApp,Version=v2.0). Package Microsoft.AspNetCore.App 2.1.0 supports: netcoreapp2.1 (.NETCoreApp,Version=v2.1)",
+      "libraryId": "Microsoft.AspNetCore.App",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]
