@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Mortage Calculator";
+}
+
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <p>
+                <label>Please enter the loan amount</label>
+                <input name="Loan_Amount" type="text" asp-for="Loan_Amount" value="" />
+                <br />
+
+                <label>Please enter the interest rate</label>
+                <input name="Interest" type="text" asp-for="Interest" value="" />
+                <br />
+
+                <label>Please enter the duration</label>
+                <input name="Duration" type="text" asp-for="Duration" value="" />
+                <br />
+                <button type="submit"> Submit </button>
+            </p>
+        </form>
+    </div>
+
